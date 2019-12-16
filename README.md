@@ -42,21 +42,22 @@
 
 ​	计划是在一段时间内，完成一定量阅读内容的时间表。阅读计划包括以下属性：
 
-| 标识               | 名称         | 类型       | 说明                   |
-| ------------------ | ------------ | ---------- | ---------------------- |
-| id                 | 计划编号     | bigint     | 自动编号               |
-| author             | 计划作者     | char(36)   |                        |
-| title              | 计划标题     | string(32) |                        |
-| subjectImageId     | 主题图片编号 | bigint     |                        |
-| subjectScriptureId | 主题经文编号 | bigint     |                        |
-| commentId          | 计划备注编号 | bigint     |                        |
-| bkgImageId         | 背景图片编号 | bigint     |                        |
-| createOn           | 创建时间     | datetime   |                        |
-| createFrom         | 计划模板     | bigint     |                        |
-| createPathId       | 创建路径编号 | bigint     | 记录从根计划开始的路径 |
-| beginOn            | 开始时间     | datetime   |                        |
-| endOn              | 结束时间     | datetime   |                        |
-| totalDays          | 天数         | smallint   |                        |
+| 标识               | 名称           | 类型       | 说明                   |
+| ------------------ | -------------- | ---------- | ---------------------- |
+| id                 | 计划编号       | bigint     | 自动编号               |
+| author             | 计划作者       | char(36)   |                        |
+| title              | 计划标题       | string(32) |                        |
+| subjectImageId     | 主题图片编号   | bigint     |                        |
+| subjectScriptureId | 主题经文编号   | bigint     |                        |
+| commentId          | 计划备注编号   | bigint     |                        |
+| bkgImageId         | 背景图片编号   | bigint     |                        |
+| createOn           | 创建时间       | datetime   |                        |
+| createFrom         | 计划模板       | bigint     |                        |
+| createPathId       | 创建路径编号   | bigint     | 记录从根计划开始的路径 |
+| beginOn            | 开始时间       | datetime   |                        |
+| endOn              | 结束时间       | datetime   |                        |
+| totalDays          | 天数           | smallint   |                        |
+| scheduleId         | 计划时间表编号 | bigint     |                        |
 
 ### 计划用户 plan_user
 
@@ -74,19 +75,19 @@
 | isDeny        | 是否被拒绝参与计划 | bool     |      |
 |               |                    |          |      |
 
-### 计划内容 plan_content
+### 计划时间表 plan_schedule
 
-​	 计划的细节内容。包括以下属性：
+​	 计划的时间表是一些计划单元的组合。计划单元是计划的最小执行单位。包括以下属性：
 
-| 标识   | 名称     | 类型   | 说明 |
-| ------ | -------- | ------ | ---- |
-| planId | 计划编号 | bigint |      |
-|        |          |        |      |
-|        |          |        |      |
-|        |          |        |      |
-|        |          |        |      |
-|        |          |        |      |
-|        |          |        |      |
+| 标识   | 名称           | 类型   | 说明 |
+| ------ | -------------- | ------ | ---- |
+| id     | 计划时间表编号 | bigint |      |
+| cellId | 计划单元编号   | bigint |      |
+|        |                |        |      |
+|        |                |        |      |
+|        |                |        |      |
+|        |                |        |      |
+|        |                |        |      |
 
 
 
